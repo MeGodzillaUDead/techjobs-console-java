@@ -77,7 +77,7 @@ public class JobData {
 
             String aValue = row.get(column);
 
-            if (aValue.contains(value)) {
+            if (aValue.toLowerCase().contains(value.toLowerCase())) {
                 jobs.add(row);
             }
         }
@@ -98,7 +98,7 @@ public class JobData {
 
             for (Map.Entry<String, String> field : job.entrySet()) {
                 String aValue = field.getValue();
-                if (aValue.contains(value)){
+                if (aValue.toLowerCase().contains(value.toLowerCase())){
                     termFound = true;
                 }
             }
